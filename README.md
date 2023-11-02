@@ -1,2 +1,27 @@
-# smaregi_spreadsheet_tools
-This project is a Google Apps Script (GAS) script that supports Smaregi operations using the Smaregi API.
+# Smaregi Spreadsheet Tools
+
+## 概要
+
+このプロジェクトは、Smaregi API を用いて Google スプレッドシートと連携する一連の Google Apps Script（GAS）スクリプトです。主に商品管理と在庫管理に関連する操作をスプレッドシート上で可能とします。
+
+## 機能一覧
+
+- **在庫数の取得 / getstocks.gs**: スプレッドシートから商品 ID を取得し、それに関連する在庫情報を API から取得してスプレッドシートに書き込みます。
+- **商品画像の登録在庫数の取得 / productImg.gs**: 商品に関連する画像情報を FTP サーバー経由で取得し、通常の管理画面ではできない一括登録処理を行います。
+- **商品一括更新 / bulkUpdate.gs**: スプレッドシートから取得した商品情報を用いて一括更新を行います。通常の管理画面は、不必要な項目が必須事項だったり、誤爆の危険が高いですが、このスクリプトでは必要な項目のみを更新することができます。
+- **新規商品登録 / productNew.gs**: 新規商品をスプレッドシートから登録します。 **開発中**
+- **商品 DB 同期 / reloadItem.gs**: 最近更新された商品データを API から取得します。
+- **商品情報取得 / getProductInfo.gs**: スプレッドシートから商品情報を取得し、詳細を API から取得します。
+- **ui.gs**: スプレッドシートに UI 要素を追加します。
+- **accesstoken.gs**: Smaregi API のアクセストークンを取得します。
+- **fetchItem.gs**: 商品データを API から取得してスプレッドシートに記入します。
+
+## セットアップ
+
+1. スプレッドシートを作成し、必要な形式でデータを入力します。
+2. Google Apps Script エディタを開き、このリポジトリのスクリプトをコピーして貼り付けます。
+3. スクリプトプロパティに Smaregi API のトークンやその他の設定を追加します。環境変数はスクリプトプロパティを使用してください。
+
+## 使用方法
+
+各スクリプトは、スプレッドシートのメニューから実行できます。または、Google Apps Script エディタから直接実行することも可能です。
